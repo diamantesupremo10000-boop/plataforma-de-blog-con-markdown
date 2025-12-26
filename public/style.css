@@ -1,0 +1,45 @@
+:root {
+    --bg: #ffffff;
+    --text: #333333;
+    --accent: #2c3e50;
+    --light-gray: #f8f9fa;
+    --border: #e9ecef;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif; /* Tipografía tipo blog */
+    line-height: 1.6;
+    color: var(--text);
+    margin: 0;
+    background: var(--bg);
+}
+
+nav { border-bottom: 1px solid var(--border); padding: 1rem 0; margin-bottom: 2rem; }
+.nav-content { max-width: 700px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 1rem; }
+h1 { margin: 0; cursor: pointer; font-family: sans-serif; letter-spacing: -1px; }
+
+.container { max-width: 700px; margin: 0 auto; padding: 0 1rem; }
+.hidden { display: none; }
+
+/* Formulario */
+input, textarea { width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; font-family: sans-serif; }
+textarea { height: 150px; resize: vertical; }
+
+/* Botones */
+button { cursor: pointer; padding: 8px 16px; border-radius: 4px; border: none; font-size: 0.9rem; }
+.primary-btn { background: var(--accent); color: white; }
+.secondary-btn { background: transparent; color: #666; }
+.back-btn { background: transparent; color: var(--accent); padding-left: 0; margin-bottom: 1rem; }
+
+/* Lista de Posts */
+.post-card { padding: 1.5rem 0; border-bottom: 1px solid var(--border); cursor: pointer; transition: opacity 0.2s; }
+.post-card:hover { opacity: 0.7; }
+.post-card h2 { margin: 0 0 0.5rem 0; font-size: 1.5rem; font-family: sans-serif; }
+.post-date { color: #888; font-size: 0.85rem; font-family: sans-serif; }
+
+/* Estilos de Markdown Renderizado */
+article h1 { font-size: 2.5rem; margin-bottom: 0.5rem; line-height: 1.2; font-family: sans-serif; }
+article blockquote { border-left: 4px solid var(--accent); padding-left: 1rem; color: #555; font-style: italic; }
+article pre { background: var(--light-gray); padding: 1rem; overflow-x: auto; border-radius: 4px; }
+article code { background: var(--light-gray); padding: 0.2rem 0.4rem; border-radius: 3px; font-family: monospace; }
+article img { max-width: 100%; height: auto; border-radius: 4px; }
