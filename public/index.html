@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <h1 onclick="showHome()">DevBlog</h1>
+            <button id="newPostBtn" onclick="toggleForm()">+ Nuevo Post</button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="createSection" class="hidden">
+            <h2>Escribir nuevo artículo</h2>
+            <input type="text" id="postTitle" placeholder="Título del artículo" autocomplete="off">
+            <textarea id="postContent" placeholder="Escribe aquí usando Markdown... (# Título, **negrita**, - lista)"></textarea>
+            <div class="form-actions">
+                <button onclick="createPost()" class="primary-btn">Publicar</button>
+                <button onclick="toggleForm()" class="secondary-btn">Cancelar</button>
+            </div>
+        </section>
+
+        <section id="listView">
+            </section>
+
+        <section id="readView" class="hidden">
+            <button onclick="showHome()" class="back-btn">← Volver</button>
+            <article id="articleContent">
+                </article>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
